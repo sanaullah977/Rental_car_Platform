@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.postimg.cc/example2.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Bed Installation",
+    "providerName": "WarmPaws Home",
+    "providerEmail": "support@warmpaws.com",
+    "price": 45,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Installation of safe, heated pet beds to ensure warmth during chilly nights.",
+    "image": "https://i.postimg.cc/example3.png",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Pet Boarding",
+    "providerName": "FrostyFur Lodge",
+    "providerEmail": "bookings@frostyfur.com",
+    "price": 60,
+    "rating": 4.6,
+    "slotsAvailable": 2,
+    "description": "Cozy indoor boarding with heated floors and daily winter walks for your pet.",
+    "image": "https://i.postimg.cc/example4.png",
+    "category": "Boarding"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Snow-Safe Paw Booties",
+    "providerName": "SnowPaws Outfitters",
+    "providerEmail": "sales@snowpaws.com",
+    "price": 20,
+    "rating": 4.5,
+    "slotsAvailable": 8,
+    "description": "Durable, non-slip booties to protect pet paws from snow, ice, and salt.",
+    "image": "https://i.postimg.cc/example5.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Diet Consultation",
+    "providerName": "HealthyPet Nutrition",
+    "providerEmail": "consult@healthypet.com",
+    "price": 35,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Personalized winter diet plans to maintain your pet's health and energy in cold weather.",
+    "image": "https://i.postimg.cc/example6.png",
+    "category": "Nutrition"
+  }
+]
