@@ -4,21 +4,21 @@ import tara from "../../assets/icon-ratings.png";
 import { useLoaderData } from "react-router";
 import { useEffect, useState } from "react";
 
-const Installation = () => {
+const PetCart = () => {
   const [order, setOrder] =useState('none')
   console.log({order})
-  const [installation, setInstallation] =useState([])
+  const [PetCart, setPetCart] =useState([])
   useEffect(() => {
     const savedList = JSON.parse(localStorage.getItem('PetCart'))
-    if(savedList) setInstallation(savedList)
+    if(savedList) setPetCart(savedList)
   },[])
-  const installedItem = (() => {
+  const PetCartItem = (() => {
     if (order === 'price-asc') {
-      return [...installation].sort((a,b) => a.size - b.size)
+      return [...PetCart].sort((a,b) => a.size - b.size)
     } else if (order === 'price-desc') {
-      return [...installation].sort((a,b) => b.size - a.size)
+      return [...PetCart].sort((a,b) => b.size - a.size)
     } else{
-      return installation
+      return PetCart
     }
 
   })()
@@ -29,7 +29,7 @@ const Installation = () => {
     const updatedList = existingList.filter(p=>p.serviceId != serviceId)
     console.log(updatedList)
 
-    setInstallation (prev=> prev.filter(p=>p.serviceId != serviceId))
+    setPetCart (prev=> prev.filter(p=>p.serviceId != serviceId))
     localStorage.setItem('PetCart', JSON.stringify(updatedList));
     };
 
@@ -42,7 +42,7 @@ const Installation = () => {
         Explore All Trending Equipments on the Market developed by us
       </p>
       <div className="flex justify-between md:w-[1400px] w-[448px] m-10 items-center">
-        <h3 className="text-2xl font-bold">{installation.length} Total Equipments</h3>
+        <h3 className="text-2xl font-bold">{PetCart.length} Total Equipments</h3>
         <select value='none' onChange={e=> setOrder(e.target.value)}>
             <option value="none">Sort by Price</option>
             <option value="price-asc">Low-High</option>
@@ -52,7 +52,7 @@ const Installation = () => {
       
 
         {
-          installedItem.map(p =>(
+          PetCartItem.map(p =>(
           <div key={p.id} className="flex md:flex-row flex-col justify-between  lg:w-[1400px] md:w-[448px] bg-white rounded-2xl items-center my-2">
           
             <div className="flex items-center gap-5 p-5">
@@ -85,4 +85,4 @@ const Installation = () => {
   );
 };
 
-export default Installation;
+export default PetCart;

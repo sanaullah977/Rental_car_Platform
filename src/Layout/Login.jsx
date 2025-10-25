@@ -2,8 +2,33 @@ import React from "react";
 import { use } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
-
+import { GoogleAuthProvider } from "firebase/auth/web-extension";
+import { sendPasswordResetEmail, signInWithPopup } from "firebase/auth";
+import { auth } from "../firebase/firebase.config";
+const provider = new GoogleAuthProvider();
 const Login = () => {
+  // const handleReset = (e) => {
+  //   e.preventDefault();
+  //   const form = e.currenUser;
+  //   const email = form.email.value;
+
+  //   sendPasswordResetEmail(auth, email)
+  //     .then(() => {
+  //       console.log("reset Now");
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+  const handleGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const { signIn } = use(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -12,7 +37,6 @@ const Login = () => {
     const password = form.password.value;
     console.log({ email, password });
 
-    
     signIn(email, password)
       .then((result) => {
         const user = result.user;
@@ -22,7 +46,6 @@ const Login = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorCode, errorMessage);
-        
       });
   };
   return (
@@ -48,7 +71,9 @@ const Login = () => {
               name="password"
             />
             <div>
-              <a className="link link-hover">Forgot password?</a>
+              <a  className="link link-hover">
+                Forgot password?
+              </a>
             </div>
             <button className="btn btn-neutral mt-4">Login</button>
             <p className="flex justify-center">
@@ -58,6 +83,12 @@ const Login = () => {
               </Link>
             </p>
           </fieldset>
+          <span className="flex justify-center border-b-2 border-gray-200">
+            OR
+          </span>
+          <span onClick={handleGoogle} className="btn btn-neutral mt-4">
+            Sign In With Google
+          </span>
         </form>
       </div>
     </div>

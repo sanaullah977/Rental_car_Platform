@@ -3,8 +3,27 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { use } from "react";
 import img from "../../assets/IMG.jpg";
 import Navber from "../../Components/Navber";
+import { updateProfile } from "firebase/auth";
+import { auth } from "../../firebase/firebase.config";
 
 const MyProfile = () => {
+  const handleImage =(e) => {
+    
+     e.preventDefault();
+     const form = e.target;
+     const photo =form.photo.value;
+
+    updateProfile(auth.currentUser,{
+      
+       photoURL:photo
+    })
+    .then(() => {
+      console.log('Update Done')
+    })
+    .catch((error) =>{
+      console.log(error)
+    })
+  }
   const { user } = use(AuthContext);
   return (
     <div>
@@ -35,9 +54,13 @@ const MyProfile = () => {
       </p>
       
     </div>
+    <button type="input" onClick={handleImage} className="btn btn-ghost">Update Your Image</button>
   </div>
+  
 </div>
+
     </div>
+    
   );
 };
 
