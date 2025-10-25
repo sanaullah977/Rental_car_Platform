@@ -5,7 +5,16 @@ import { AuthContext } from "../provider/AuthProvider";
 import { use } from "react";
 
 const Navber = () => {
-  const {user} = use(AuthContext);
+  const {user , logOut} = use(AuthContext);
+  const handleLogout =() =>{
+    console.log("user trying logout");
+    logOut().then(() => {
+      alert("you logged out successfully")
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  };
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -17,23 +26,23 @@ const Navber = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
+        <Link to='/'><li><a>Home</a></li></Link>
         <li>
           <a>About</a>
           
         </li>
-        <li><a>My profile</a></li>
+        <Link to='/myprofile'><li><a>My profile</a></li></Link>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl"><img className="rounded-full h-13" src={logo} alt="" /> Pet Care</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
+      <Link to='/'><li><a>Home</a></li></Link>
       <li>
-        <a>About</a>
+        <Link to={'/cart'}><a>Add Cart</a></Link>
       </li>
-      <li><a>My profile</a></li>
+      <Link to='/myprofile'><li><a>My profile</a></li></Link>
     </ul>
   </div>
   
@@ -63,7 +72,7 @@ const Navber = () => {
         <div className="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            src={user?.photoURL} />
         </div>
       </div>
       <ul
@@ -71,18 +80,18 @@ const Navber = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li>
           <a className="justify-between">
-            {user && user.email}
-            <span className="badge">New</span>
+            {user && user.displayName}
+            
           </a>
         </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><a>{user && user.email}</a></li>
+        
       </ul>
     </div>
   </div>
 
     {
-      user ? <button className="btn bg-blue-500 text-amber-100">LogOut</button> : <Link to='/auth/login'><a className="btn bg-blue-500 text-amber-100">Log In</a></Link>
+      user ? <button onClick={handleLogout} className="btn bg-blue-500 text-amber-100">LogOut</button> : <Link to='/auth/login'><a className="btn bg-blue-500 text-amber-100">Log In</a></Link>
     }
     
   </div>

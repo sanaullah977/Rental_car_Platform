@@ -7,8 +7,8 @@
     "price": 25,
     "rating": 4.9,
     "slotsAvailable": 4,
-    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
-    "image": "https://i.postimg.cc/example1.png",
+    "description": "This service provides custom winter coat fitting for dogs, ensuring perfect size and warmth during cold weather. Each coat is made from high-quality, water-resistant, and breathable fabrics that protect pets from snow and wind. The design allows free movement and comfort, keeping your dog active and stylish. Measurements are taken carefully to fit each breed and body shape. The coats not only provide warmth but also enhance protection against joint stiffness and chills, ensuring your furry friend stays cozy, healthy, and happy all winter long.",
+    "image": "https://i.ibb.co.com/8DmsmwzC/704fd3aa3fe78c423a7d2ed1cb1d4da3-2.jpg",
     "category": "Clothing"
   },
   {
@@ -19,8 +19,8 @@
     "price": 30,
     "rating": 4.8,
     "slotsAvailable": 3,
-    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
-    "image": "https://i.postimg.cc/example2.png",
+    "description": "During winter, pets often suffer from dry skin and cracked paws due to the cold and salt exposure. This professional grooming service includes gentle cleaning, trimming, and moisturizing treatments designed specifically for the winter season. Special paw balms and hydrating shampoos are applied to prevent dryness and itching. The service helps maintain healthy, shiny fur while protecting sensitive paw pads from damage. Every session is tailored to your pet’s needs, ensuring relaxation and comfort throughout. It’s the perfect way to keep your furry friend’s coat soft, clean, and their paws healthy all winter long.",
+    "image": "https://i.ibb.co.com/Kxgz5vB0/1f0c609d21e69f8b3d017d57dc6727fb-1.jpg",
     "category": "Grooming"
   },
   {
@@ -31,8 +31,8 @@
     "price": 45,
     "rating": 4.7,
     "slotsAvailable": 6,
-    "description": "Installation of safe, heated pet beds to ensure warmth during chilly nights.",
-    "image": "https://i.postimg.cc/example3.png",
+    "description": "The Heated Pet Bed Installation service ensures your pet’s ultimate comfort during the cold season. Technicians install a safe, temperature-controlled heated bed that provides consistent warmth throughout chilly nights. The heating system is energy-efficient and designed with safety features to prevent overheating. Beds come with soft, washable covers, making them easy to maintain. This service is ideal for older pets or those sensitive to cold weather, helping relieve joint pain and stiffness. It transforms any sleeping area into a cozy haven, ensuring your pet enjoys deep, uninterrupted sleep in warmth and comfort every night.",
+    "image": "https://i.ibb.co.com/6cXLpxGH/6a1b8e0b9bad9630baffd0991f682124-1.jpg",
     "category": "Comfort"
   },
   {
@@ -43,8 +43,8 @@
     "price": 60,
     "rating": 4.6,
     "slotsAvailable": 2,
-    "description": "Cozy indoor boarding with heated floors and daily winter walks for your pet.",
-    "image": "https://i.postimg.cc/example4.png",
+    "description": "Winter Pet Boarding provides a warm, secure, and welcoming place for your pet while you’re away. The facility features heated indoor rooms, soft bedding, and attentive caregivers available 24/7. Pets enjoy daily walks, social playtime, and nutritious winter meals. The temperature is carefully maintained to ensure comfort and prevent illness from the cold. Staff monitor each pet closely, offering personalized care to make them feel at home. Whether for a few nights or an extended stay, this service guarantees your pet stays safe, happy, and cozy even during the harshest winter conditions outside.",
+    "image": "https://i.ibb.co.com/d01h5LBh/5b218f1f1b2ae1eab55f2a32e854209f-1.jpg",
     "category": "Boarding"
   },
   {
@@ -55,8 +55,8 @@
     "price": 20,
     "rating": 4.5,
     "slotsAvailable": 8,
-    "description": "Durable, non-slip booties to protect pet paws from snow, ice, and salt.",
-    "image": "https://i.postimg.cc/example5.png",
+    "description": "Snow-Safe Paw Booties are designed to protect your pet’s paws from ice, snow, and harmful road salts during winter walks. These booties are made from durable, water-resistant materials with non-slip soles for extra grip. They keep paws warm, clean, and injury-free even in freezing temperatures. Easy to wear and comfortable, they allow pets to move naturally while shielding their sensitive pads. Ideal for both dogs and cats, these booties prevent frostbite and skin irritation. Each pair is stylish and functional, ensuring your pet’s outdoor adventures remain safe and enjoyable throughout the cold season.",
+    "image": "https://i.ibb.co.com/7JZ3tfy0/cfed39139b56d6470704e81e5e1f913a-1.jpg",
     "category": "Clothing"
   },
   {
@@ -67,8 +67,80 @@
     "price": 35,
     "rating": 4.8,
     "slotsAvailable": 5,
-    "description": "Personalized winter diet plans to maintain your pet's health and energy in cold weather.",
-    "image": "https://i.postimg.cc/example6.png",
+    "description": "The Winter Diet Consultation helps pet owners develop customized nutrition plans tailored for cold weather. Expert pet nutritionists assess your animal’s weight, age, activity level, and breed to create a balanced meal plan that boosts energy and supports immune health. Winter diets focus on higher protein and healthy fats to help pets maintain body warmth and vitality. The consultation also provides guidance on hydration, portion control, and winter-safe supplements. This personalized approach ensures your pet stays strong, healthy, and energetic throughout the colder months while avoiding digestive issues common during seasonal diet changes.",
+    "image": "https://i.ibb.co.com/FbmGtNb7/a31972c59fbc0250639cfd82fd404723-1.jpg",
     "category": "Nutrition"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "This coat fitting service specializes in crafting stylish, insulated clothing designed for different breeds and body types. The coats are made with breathable yet warm fabrics that trap body heat while allowing ventilation. Each garment is tailored for comfort and protection from cold winds, frost, and light rain. Skilled designers ensure a snug fit that enhances mobility and prevents skin irritation. Whether for casual walks or long outdoor play, the coat keeps dogs warm and fashionable. It’s especially helpful for smaller breeds that lose heat quickly, ensuring safety and comfort throughout winter days.",
+    "image": "https://i.ibb.co.com/gMTtgj3f/ce85acb1fda4735b7fe50d01565aa974.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "This advanced grooming session focuses on maintaining pet coat health during harsh winter weather. The treatment includes warm baths using hydrating shampoos that prevent dryness and flakiness. Groomers apply a soothing paw balm that heals cracks and protects pads from ice and chemicals. The process reduces shedding, strengthens fur, and improves skin texture. Special attention is given to stress-free handling, ensuring pets remain relaxed. Regular sessions keep your pet’s appearance fresh and their skin healthy all season long. It’s a complete winter-care solution for pets prone to dry skin or rough paw conditions.",
+    "image": "https://i.ibb.co.com/k2F0K6pd/61eb1c0a9cd7be50c921dee8088d91b3.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Cold Weather Health Checkup",
+    "providerName": "Happy Tails Vet Clinic",
+    "providerEmail": "care@happytailsvet.com",
+    "price": 40,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "This comprehensive veterinary service ensures your pet’s health and safety during the cold season. The checkup includes body temperature monitoring, joint assessment, skin examination, and heart rate evaluation. Vets identify early signs of winter-related issues like arthritis, respiratory infections, or low immunity. Preventive advice and suitable medications are provided if necessary. Nutritional and exercise recommendations help maintain your pet’s overall well-being. The session focuses on early detection and prevention, giving pet owners peace of mind. Regular winter health checkups ensure your furry companion stays active, healthy, and happy even in freezing weather.",
+    "image": "https://i.ibb.co.com/wmqPhgf/398f5c41bb5fed541c9d65cb71abc498.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 10,
+    "serviceName": "Warm Nutrition Meal Plan",
+    "providerName": "PetEats Nutrition Center",
+    "providerEmail": "orders@peteats.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "This meal plan service focuses on providing nutritious, warm meals customized for your pet’s winter needs. Specialists design a diet high in protein, vitamins, and minerals to strengthen immunity and maintain energy. The meals are easy to digest, freshly prepared, and served warm to keep your pet’s body temperature stable. The plan considers age, size, and activity levels, ensuring balanced nutrition for optimal health. It helps prevent lethargy and winter weight gain while supporting joint mobility. Pets enjoy tasty, wholesome meals that boost vitality, making this the perfect option for winter wellness..",
+    "image": "https://i.ibb.co.com/jvFr9hkn/b8817e6bb740f2f67eaf2bf04a0e6cdd.jpg",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 11,
+    "serviceName": "Heated Winter Boarding Rooms",
+    "providerName": "SnowPaws Pet Resort",
+    "providerEmail": "stay@snowpawsresort.com",
+    "price": 50,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "This boarding facility offers luxurious heated rooms designed for pets staying overnight in winter. Each room is temperature-regulated, spacious, and equipped with cozy bedding to ensure warmth and relaxation. Staff provide constant supervision, regular exercise, and fresh meals tailored to winter nutrition. Pets enjoy comfort, companionship, and safety under professional care. The environment is sanitized daily and monitored to prevent cold-related stress or illness. Whether for dogs or cats, this service ensures pets experience a home-like atmosphere even during extended stays in the coldest months of the year",
+    "image": "https://i.ibb.co.com/k29220ry/444a5fdbb1ec2c28620b103193d5bcf4.jpg",
+    "category": "Boarding"
+  },
+  {
+    "serviceId": 12,
+    "serviceName": "Thermal Blanket & Bed Setup",
+    "providerName": "Purrfect Comfort Supplies",
+    "providerEmail": "sales@purrfectcomfort.com",
+    "price": 28,
+    "rating": 4.8,
+    "slotsAvailable": 7,
+    "description": "The Thermal Blanket & Bed Setup service creates a cozy sleeping space for pets using insulated materials. These thermal blankets trap heat efficiently, keeping pets warm all night long. The beds are designed with soft, hypoallergenic fabrics that prevent irritation and are easy to clean. The setup includes customized sizing to match your pet’s comfort needs. Ideal for cold-sensitive animals, it improves sleep quality and prevents chills. This service transforms ordinary bedding into a luxurious resting zone, ensuring your pet feels snug, safe, and completely comfortable during winter nights.",
+    "image": "https://i.ibb.co.com/KxdBVR55/8a3bf0174a2c774694615bfd91aae17d.jpg",
+    "category": "Accessories"
   }
 ]

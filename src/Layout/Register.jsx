@@ -5,7 +5,7 @@ import { use } from 'react';
 
 
 const Register = () => {
-  const {createUser} =use(AuthContext);
+  const {createUser , setUser,updateUser} =use(AuthContext);
   const handleRegister=(e)=>{
     e.preventDefault();
     console.log(e.target);
@@ -19,7 +19,15 @@ const Register = () => {
     createUser(email,password)
     .then((result) => {
       const user = result.user;
-      console.log(user);
+      updateUser({displayName:name ,photoURL:photo})
+      .then(() => {
+      setUser({...user,displayName:name ,photoURL:photo});
+    })
+    .catch((error) => {
+      console.log(error);
+      setUser(user);
+    });
+      
     })
     .catch((error) => {
     const errorCode = error.code;
@@ -48,6 +56,7 @@ const Register = () => {
               <a className="link link-hover">Forgot password?</a>
             </div>
             <button type="submit" className="btn btn-neutral mt-4">Register</button>
+            <button type="submit" className="btn btn-neutral mt-4">Sign In With Google</button>
             <p className='flex justify-center'>Don,t Have a Account ? <Link to='/auth/login' className="text-red-500">Log In</Link></p>
           </fieldset>
         </form>

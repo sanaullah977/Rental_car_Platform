@@ -6,6 +6,10 @@ import Home from '../Layout/Home';
 import Auth from '../Layout/auth';
 import Login from '../Layout/Login';
 import Register from '../Layout/Register';
+import EquipmentDetails from '../Layout/equipmentDetails';
+import EquipmentLayout from '../Layout/EquipLayout/EquipmentLayout';
+import MyProfile from '../Layout/MyProfile/MyProfile';
+import PetCartLayout from '../Layout/PetCartLayOut/PetCartLayout';
 
 
 export 
@@ -13,13 +17,15 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component:Root,
-    errorElement:ErrorPage,
+    element:<Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
 
     children:[
       {
         index:true,
         path:'/',
         Component:Home,
+         loader : () => fetch ('/Pets.json')
 
       },
       
@@ -41,5 +47,24 @@ const router = createBrowserRouter([
             Component:Register,
           }
         ]
-      }
+  },
+
+  {
+    path:'/equipmentdetails/:serviceId',
+    Component:EquipmentLayout,
+    loader : () => fetch ('/Pets.json'),
+
+    children:[
+
+    ]
+  },
+  {
+    path:'/myprofile',
+    Component:MyProfile,
+  },
+  {
+    path:'/cart',
+    Component:PetCartLayout
+  }
+    
 ]);
