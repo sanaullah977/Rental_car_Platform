@@ -1,17 +1,17 @@
 import React from 'react';
 import Navber from '../../Components/Navber';
+import AddCars from './AddCars';
 import Footer from '../../Components/Footer';
-import PetCart from './PetCart';
 
-const PetCartLayout = () => {
+const AllCarsLayout = () => {
     return (
         <div>
             <Navber></Navber>
-            <PetCart></PetCart>
+            <AddCars></AddCars>
             <Footer></Footer>
             
         </div>
     );
 };
 
-export default PetCartLayout;
+export default AllCarsLayout;

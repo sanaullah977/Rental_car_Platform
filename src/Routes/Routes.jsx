@@ -6,10 +6,19 @@ import Home from '../Layout/Home';
 import Auth from '../Layout/auth';
 import Login from '../Layout/Login';
 import Register from '../Layout/Register';
-import EquipmentDetails from '../Layout/equipmentDetails';
-import EquipmentLayout from '../Layout/EquipLayout/EquipmentLayout';
+
 import MyProfile from '../Layout/MyProfile/MyProfile';
-import PetCartLayout from '../Layout/PetCartLayOut/PetCartLayout';
+
+
+import AddCarsLayout from '../Layout/AllCars/AllCarsLayout'
+import UpdateCarDB from '../Layout/AllCars/UpdateCarDB';
+import CartLayout from '../Layout/PetCartLayOut/CartLayout';
+import CarDetails from '../Layout/CarDetails';
+import CarDetailsLayout from '../Layout/PetCartLayOut/CarDetails/CarDetailsLayout';
+import Cart from '../Layout/PetCartLayOut/Cart';
+import AppDetails from '../Layout/Allcars';
+import AllCar from '../Layout/Allcars';
+
 
 
 export 
@@ -25,7 +34,7 @@ const router = createBrowserRouter([
         index:true,
         path:'/',
         Component:Home,
-         loader : () => fetch ('/Pets.json')
+         loader : () => fetch ('http://localhost:3000/rentcar')
 
       },
       
@@ -50,21 +59,41 @@ const router = createBrowserRouter([
   },
 
   {
-    path:'/equipmentdetails/:serviceId',
-    Component:EquipmentLayout,
-    loader : () => fetch ('/Pets.json'),
+    path:'/cardetails/:_id',
+    Component:CarDetailsLayout,
+    loader : ({params}) => fetch (`http://localhost:3000/rentcar/${params._id}`),
 
-    children:[
-
-    ]
+    
   },
   {
     path:'/myprofile',
     Component:MyProfile,
   },
+  
   {
     path:'/cart',
-    Component:PetCartLayout
-  }
+    Component:CartLayout,
+    loader: ({params}) => fetch (`http://localhost:3000/rentcar/${params._id}`)
+  },
+  {
+    path:'/addcar',
+    element:<AddCarsLayout/>,
+    loader : () => fetch('http://localhost:3000/rentcar')
+  },
+  {
+    path:'/updatadb/:_id',
+    element: <UpdateCarDB/>,
+    loader : ({params}) => fetch(`http://localhost:3000/rentcar/${params._id}`)
+  },
+
+  {
+    path:'/allcars',
+    Component:AllCar,
+    loader:() => fetch(`http://localhost:3000/rentcar/`)
+  },
+
     
 ]);
+
+
+// XcytQe1buuVSqiei

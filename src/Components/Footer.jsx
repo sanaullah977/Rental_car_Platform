@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div>
       <div>
-        <footer className="footer sm:footer-horizontal bg-blue-900 text-neutral-content p-10   items-center justify-around ">
+        <footer className="footer sm:footer-horizontal bg-gradient-to-r from-[#0566f7] to-[#cabcdf] text-neutral-content p-10   items-center justify-around ">
           <nav className="flex gap-3 items-center">
             <img className="h-11 rounded-full" src={logo} alt="" />
             {/* <span className="text-white font-bold">Pet Care</span> */}
@@ -36,21 +36,21 @@ const Footer = () => {
           </nav>
           <nav>
             <h1 className="text-[18] font-semibold">Social Links</h1>
-            <span className="flex items-center gap-3 text-gray-400">
+            <span className="flex items-center gap-3 text-gray-500">
               <FaSquareXTwitter />
-              @Pet Care
+              @Car Dealer
             </span>
-            <span className="flex items-center gap-3 text-gray-400">
+            <span className="flex items-center gap-3 text-gray-500">
               <FaLinkedin />
-              @Pet Care
+              @Car Dealer
             </span>
-            <span className="flex items-center gap-3 text-gray-400">
+            <span className="flex items-center gap-3 text-gray-500">
               <FaSquareFacebook />
-              @Pet Care
+              @Car Dealer
             </span>
-            <span className="flex items-center gap-3 text-gray-400">
+            <span className="flex items-center gap-3 text-gray-500">
               <MdEmail />
-              support@Pet_Care.com
+              support@Car_Dealer.com
             </span>
           </nav>
         </footer>
@@ -58,7 +58,7 @@ const Footer = () => {
         <div className=" flex flex-col md:flex-col items-center  bg-black w-[768px] md:w-[1900px] h-[100px] text-white md:text-white justify-center">
           <span className="border-t-2 border-gray-700 w-[768px] md:w-[1350px]  "></span>
           <p className=" p-3 md:p-10 text-[18px]">
-            © 2025 <span>Pet Care</span>. All rights reserved.
+            © 2025 <span>Car Dealer</span>. All rights reserved.
           </p>
         </div>
       </div>

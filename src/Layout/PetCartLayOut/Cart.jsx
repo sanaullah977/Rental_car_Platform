@@ -1,40 +1,41 @@
 
-import arrow from "../../assets/icon-downloads.png";
+
 import tara from "../../assets/icon-ratings.png";
 import { useLoaderData } from "react-router";
 import { useEffect, useState } from "react";
 
-const PetCart = () => {
+const Cart = () => {
   const [order, setOrder] =useState('none')
   console.log({order})
-  const [PetCart, setPetCart] =useState([])
+  const [Cart, setCart] =useState([])
   useEffect(() => {
-    const savedList = JSON.parse(localStorage.getItem('PetCart'))
-    if(savedList) setPetCart(savedList)
+    const savedList = JSON.parse(localStorage.getItem('Cart'))
+    if(savedList) setCart(savedList)
   },[])
-  const PetCartItem = (() => {
+  const CartItem = (() => {
     if (order === 'price-asc') {
-      return [...PetCart].sort((a,b) => a.size - b.size)
+      return [...Cart].sort((a,b) => a.size - b.size)
     } else if (order === 'price-desc') {
-      return [...PetCart].sort((a,b) => b.size - a.size)
+      return [...Cart].sort((a,b) => b.size - a.size)
     } else{
-      return PetCart
+      return Cart
     }
 
   })()
-    const handleRemove = serviceId => {
-      console.log(serviceId)
-      const existingList =JSON.parse(localStorage.getItem('PetCart'))
+    const handleRemove = _id => {
+      console.log(_id)
+      const existingList =JSON.parse(localStorage.getItem('Cart'))
       console.log(existingList)
-    const updatedList = existingList.filter(p=>p.serviceId != serviceId)
+    const updatedList = existingList.filter(p=>p._id != _id)
     console.log(updatedList)
 
-    setPetCart (prev=> prev.filter(p=>p.serviceId != serviceId))
-    localStorage.setItem('PetCart', JSON.stringify(updatedList));
+    setCart (prev=> prev.filter(p=>p._id != _id))
+    localStorage.setItem('Cart', JSON.stringify(updatedList));
     };
 
   const products= useLoaderData ();
-  console.log(products)
+  const data= products
+  console.log(data)
   return (
     <div className="flex flex-col  justify-center items-center h-full bg-gray-100  p-10">
       <h2 className="text-4xl font-bold p-3">Purchased Pet Equipments</h2>
@@ -42,7 +43,7 @@ const PetCart = () => {
         Explore All Trending Equipments on the Market developed by us
       </p>
       <div className="flex justify-between md:w-[1400px] w-[448px] m-10 items-center">
-        <h3 className="text-2xl font-bold">{PetCart.length} Total Equipments</h3>
+        <h3 className="text-2xl font-bold">{Cart.length} Total Equipments</h3>
         <select value='none' onChange={e=> setOrder(e.target.value)}>
             <option value="none">Sort by Price</option>
             <option value="price-asc">Low-High</option>
@@ -52,13 +53,13 @@ const PetCart = () => {
       
 
         {
-          PetCartItem.map(p =>(
+          CartItem.map(p =>(
           <div key={p.id} className="flex md:flex-row flex-col justify-between  lg:w-[1400px] md:w-[448px] bg-white rounded-2xl items-center my-2">
           
             <div className="flex items-center gap-5 p-5">
-          <img className="h-12 rounded-b-lg " src={p.image} alt="" />
+          <img className="h-12 rounded-b-lg " src={p.hostedImageUrl} alt="" />
           <div>
-            <h4 className="font-semibold text-lg">{p.serviceName}</h4>
+            <h4 className="font-semibold text-lg">{p.carName}</h4>
             <div className="flex gap-3">
               <span className="badge badge-outline  text-green-600 bg-yellow-100">
                 
@@ -67,12 +68,12 @@ const PetCart = () => {
               <span className="flex gap-1">
                 <img className="h-5 " src={tara} alt="" />{p.rating}
               </span>
-              <span>({p.price}MB)</span>
+              <span>$({p.rentPrice})</span>
             </div>
           </div>
         </div>
         
-        <button onClick={ () => handleRemove (p.serviceId) } className="btn  bg-blue-500 mr-3 text-white">Buy</button>
+        <button onClick={ () => handleRemove (p._id) } className="btn  bg-blue-500 mr-3 text-white">Buy</button>
         
         </div>
           )
@@ -85,4 +86,4 @@ const PetCart = () => {
   );
 };
 
-export default PetCart;
+export default Cart;
