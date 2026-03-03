@@ -10,7 +10,7 @@ import Register from '../Layout/Register';
 import MyProfile from '../Layout/MyProfile/MyProfile';
 
 
-import AddCarsLayout from '../Layout/AllCars/AllCarsLayout'
+
 import UpdateCarDB from '../Layout/AllCars/UpdateCarDB';
 import CartLayout from '../Layout/PetCartLayOut/CartLayout';
 import CarDetails from '../Layout/CarDetails';
@@ -18,6 +18,11 @@ import CarDetailsLayout from '../Layout/PetCartLayOut/CarDetails/CarDetailsLayou
 import Cart from '../Layout/PetCartLayOut/Cart';
 import AppDetails from '../Layout/Allcars';
 import AllCar from '../Layout/Allcars';
+import PrivateRoute from './PrivateRoute';
+import AllCars from '../Layout/Allcars';
+import AllCarsLayout from '../Layout/AllCars/AllCarsLayout';
+import AddCars from '../Layout/AllCars/AddCars';
+import AddCarsLayout from '../Layout/AllCars/AddCarsLayout';
 
 
 
@@ -34,7 +39,7 @@ const router = createBrowserRouter([
         index:true,
         path:'/',
         Component:Home,
-         loader : () => fetch ('http://localhost:3000/rentcar')
+         loader : () => fetch ('https://y-one-ecru.vercel.app/rentcar')
 
       },
       
@@ -60,36 +65,43 @@ const router = createBrowserRouter([
 
   {
     path:'/cardetails/:_id',
-    Component:CarDetailsLayout,
-    loader : ({params}) => fetch (`http://localhost:3000/rentcar/${params._id}`),
+   element:
+    <CarDetailsLayout></CarDetailsLayout>
+   ,
+    loader : ({params}) => fetch (`https://y-one-ecru.vercel.app/rentcar/${params._id}`),
 
     
   },
   {
     path:'/myprofile',
-    Component:MyProfile,
+    element:<PrivateRoute><MyProfile/></PrivateRoute>
   },
   
   {
     path:'/cart',
-    Component:CartLayout,
-    loader: ({params}) => fetch (`http://localhost:3000/rentcar/${params._id}`)
+  element:<PrivateRoute><CartLayout/></PrivateRoute>,
+  
+    loader: () => fetch (`https://y-one-ecru.vercel.app/rentcar`),
   },
   {
     path:'/addcar',
-    element:<AddCarsLayout/>,
-    loader : () => fetch('http://localhost:3000/rentcar')
+    element:<PrivateRoute>
+      <AddCarsLayout/>
+      </PrivateRoute>,
+    loader : () => fetch('https://y-one-ecru.vercel.app/rentcar')
   },
   {
     path:'/updatadb/:_id',
-    element: <UpdateCarDB/>,
-    loader : ({params}) => fetch(`http://localhost:3000/rentcar/${params._id}`)
+    element: <PrivateRoute>
+      <UpdateCarDB/>
+    </PrivateRoute>,
+    loader : ({params}) => fetch(`https://y-one-ecru.vercel.app/rentcar/${params._id}`)
   },
 
   {
     path:'/allcars',
-    Component:AllCar,
-    loader:() => fetch(`http://localhost:3000/rentcar/`)
+    element:<AllCarsLayout/>,
+    loader:() => fetch(`https://y-one-ecru.vercel.app/rentcar`)
   },
 
     

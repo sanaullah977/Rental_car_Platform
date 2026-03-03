@@ -9,6 +9,7 @@ import { Link, useLoaderData } from 'react-router';
 const Trending = () => {
     
     const petProducts= useLoaderData ()
+    console.log(petProducts)
     const randomArray = (arr) =>{
         return arr.sort(() => Math.random() - 0.5);
     };
@@ -30,7 +31,7 @@ const Trending = () => {
     <Link to={`/cardetails/${product._id}`}> <div key={product._id} className="card my-5 border-2 bg-white h-80 w-72 shadow-md hover:scale-110 transition ease-in-out">
        <figure className=''>
          <img className='h-[180px] w-[220px] p-5'
-           src={product.image}
+           src={product.hostedImageUrl}
            alt="Apps" />
        </figure>
        <div className="card-body">

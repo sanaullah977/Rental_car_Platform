@@ -19,7 +19,7 @@ const UpdateCarDB = () => {
       hostedImageUrl: e.target.hostedImageUrl.value,
     };
 
-    fetch(`http://localhost:3000/rentcar/${cars._id}/`, {
+    fetch(`https://y-one-ecru.vercel.app/rentcar/${cars._id}/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

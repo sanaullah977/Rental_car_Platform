@@ -3,8 +3,10 @@ import logo from "../assets/logo.jpg"
 import { Link } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { use } from "react";
+import useTheme from "../hooks/useTheme";
 
 const Navber = () => {
+    const { theme, toggleTheme } = useTheme();
   const {user , logOut} = use(AuthContext);
   const handleLogout =() =>{
     console.log("user trying logout");
@@ -17,7 +19,7 @@ const Navber = () => {
   };
   return (
     <div className="">
-      <div className="navbar bg-gradient-to-l from-[#0566f7] to-[#cabcdf] shadow-sm">
+      <div className="navbar bg-gradient-to-r from-[#0566f7] to-[#cabcdf] shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -71,6 +73,13 @@ const Navber = () => {
           </div>
         </div>
       </div>
+       <input
+        type="checkbox"
+        value="dark"
+        className="toggle theme-controller mr-6 text-white"
+        checked={theme === "dark"}
+        onChange={(e) => toggleTheme(e.target.checked)}
+      />
     </div>
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">

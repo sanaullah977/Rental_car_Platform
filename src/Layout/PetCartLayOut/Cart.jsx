@@ -2,9 +2,11 @@
 
 import tara from "../../assets/icon-ratings.png";
 import { useLoaderData } from "react-router";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Cart = () => {
+ const {user} =use(AuthContext)
   const [order, setOrder] =useState('none')
   console.log({order})
   const [Cart, setCart] =useState([])
@@ -33,12 +35,12 @@ const Cart = () => {
     localStorage.setItem('Cart', JSON.stringify(updatedList));
     };
 
-  const products= useLoaderData ();
-  const data= products
-  console.log(data)
+  const products= useLoaderData();
+  
+  console.log(products)
   return (
     <div className="flex flex-col  justify-center items-center h-full bg-gray-100  p-10">
-      <h2 className="text-4xl font-bold p-3">Purchased Pet Equipments</h2>
+      <h2 className="text-4xl font-bold p-3">My Add List</h2>
       <p className="text-gray-400 p-3">
         Explore All Trending Equipments on the Market developed by us
       </p>

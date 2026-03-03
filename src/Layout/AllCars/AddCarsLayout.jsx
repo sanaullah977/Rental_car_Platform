@@ -2,17 +2,16 @@ import React from 'react';
 import Navber from '../../Components/Navber';
 import AddCars from './AddCars';
 import Footer from '../../Components/Footer';
-import AllCars from '../Allcars';
 
-const AllCarsLayout = () => {
+const AddCarsLayout = () => {
     return (
         <div>
             <Navber></Navber>
-            <AllCars></AllCars>
+            <AddCars></AddCars>
             <Footer></Footer>
             
         </div>
     );
 };
 
-export default AllCarsLayout;
+export default AddCarsLayout;

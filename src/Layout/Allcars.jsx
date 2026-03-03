@@ -6,6 +6,7 @@ import { Link, useLoaderData } from "react-router";
 const AllCars = () => {
   const [search, setSearch] = useState("");
   const products = useLoaderData();
+  console.log(products)
   console.log(products.data)
   const term = search.trim().toLocaleLowerCase();
 
@@ -15,13 +16,19 @@ const AllCars = () => {
   const [loading, setLoading] = useState(false);
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
+    console.log(value)
     setSearchText(value);
+
     setLoading(true); 
 
-    
+    console.log(products)
     setTimeout(() => {
-      const matchedCars = products.filter((Car) =>
-        Car.title.toLowerCase().includes(value)
+      const matchedCars = products.filter((Car) => {
+        console.log(Car.carName);
+        return  Car.carName.toLowerCase().includes(value)
+
+      }
+       
       );
       setFilteredCars(matchedCars);
       setLoading(false); 
@@ -48,7 +55,7 @@ const AllCars = () => {
         </div>
         {filteredCars.length == 0 && 
         <div className="flex flex-col justify-center items-center"> 
-          <img src={sError} alt="" />
+          
           <p className="font-bold text-gray-400 text-4xl py-5">
             Cars Not Found
           </p>
@@ -70,15 +77,21 @@ const AllCars = () => {
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">{products.carName}</h2>
+                  <h2 className="">
+           {products.providerName}
+         </h2>
+         <h2 className="">
+           {products.providerEmail}
+         </h2>
 
                   <div className="card-actions justify-between">
-                    <div className="badge badge-outline  text-green-600 bg-green-100">
+                    <div className="badge badge-outline  text-blue-600 bg-purple-100">
                       
                       {products.category}
                     </div>
-                    <div className="badge badge-outline  text-yellow-600 bg-yellow-100">
+                    <div className="badge badge-outline  text-gray-600 bg-gray-100">
                       
-                      {products.rentPrice}
+                     $ {products.rentPrice}
                     </div>
                   </div>
                 </div>

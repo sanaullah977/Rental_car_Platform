@@ -24,7 +24,7 @@ const CarDetails = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/rentcar/${cars._id}`, {
+        fetch(`https://y-one-ecru.vercel.app/rentcar/${cars._id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -66,7 +66,7 @@ const CarDetails = () => {
   };
 
   return (
-    <div className="bg-blue-100 rounded-3xl">
+    <div className="bg-blue-100 black:bg-blue-500 rounded-3xl">
       <div className="items-center md:w-[1000px] w-[448px]   rounded-3xl p-10  my-10 justify-center mx-auto">
         <div className="flex md:flex-row flex-col mx-auto md:w-[1400px] w-[448px] p-5 gap-5 justify-center items-center m-5">
           <img className="h-[300px] rounded-4xl shadow-md " src={cars.hostedImageUrl} alt="" />
@@ -117,9 +117,9 @@ const CarDetails = () => {
 
                 <button
                   onClick={handleClick}
-                  className="btn bg-green-400 mx-auto text-white"
+                  className="btn bg-green-400 ml-40 text-white"
                 >
-                 Book now
+                ADD List
                 </button>
               </div>
 

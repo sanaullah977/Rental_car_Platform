@@ -2,7 +2,8 @@
 import toast from "react-hot-toast";
 import { AuthContext } from '../../provider/AuthProvider';
 import { use } from 'react';
-import { useLoaderData } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
+import Swal from "sweetalert2";
 
 
 
@@ -12,6 +13,7 @@ const AddCars = () => {
     
   
     const { user } = use(AuthContext);
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
     e.preventDefault()
@@ -31,7 +33,7 @@ const AddCars = () => {
     }   
      console.log(formData)
 
-    fetch(`http://localhost:3000/rentcar`, {
+    fetch(`https://y-one-ecru.vercel.app/rentcar`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,6 +45,12 @@ const AddCars = () => {
     .then(data=> {
       toast.success("Successfully added!")
       console.log(data)
+      Swal.fire({
+  title: "Great Job!",
+  icon: "success",
+  draggable: true
+});
+      navigate('/allcars')
     })
     .catch(error => {
       console.log(error)
